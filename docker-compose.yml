@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  todo_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /start
+    image: alitrack/flask-todo:app
+    ports:
+    - "8001:8001"
+
