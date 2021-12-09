@@ -1,11 +1,11 @@
 version: "3.8"
 services:
-  todo_app:
+  bokeh_app:
     build:
       context: .
       dockerfile: Dockerfile
     command: /start
-    image: alitrack/flask-todo:app
+    image: alitrack/flask_bokeh_htmx:app
     ports:
     - "8001:8001"
 
