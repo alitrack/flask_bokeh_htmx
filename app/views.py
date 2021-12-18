@@ -1,14 +1,15 @@
 from app.kmenas import get_clusters,cols
 from . import app
 
-from flask import request,render_template
 
-x,y,cluster = cols[0],cols[0],4 #'sepal_length','sepal_length',3
+from flask import request,render_template
+x,y,cluster = cols[0],cols[0],3 #'sepal_length','sepal_length',3
+
 @app.get("/")
 def home():
     #cols =["sepal_length" , "sepal_width" , "petal_length" , "petal_width"]
-
-    return render_template("kmeans.html",cols=cols,title="Home")
+    script, div=get_clusters(x,y,cluster)
+    return render_template("kmeans.html",cols=cols,title="Home",script=script,div=div)
 
 @app.post("/kmeans")
 def post_kmeans():
