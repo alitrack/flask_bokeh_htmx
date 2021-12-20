@@ -13,3 +13,8 @@ pip install --no-cache-dir -r requirements.txt
 ```
 
 or just try Docker
+
+
+## Online example
+
+[https://htmx.pythonanywhere.com](https://htmx.pythonanywhere.com)
